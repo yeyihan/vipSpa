@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/vipspa.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<a href="#/home">home</a>
+		<a href="#/home/index1">home1</a>
+		<a href="#/home/index2">home2</a>
+		<a href="#/login">login</a>
+		<div id="conter" style="width: 500px;height: 500px ; border: 1px solid #000;">
+			
+			
+		</div>
+	</body>
+	
+	
+	<script type="text/javascript">
+		var  routeIndex = {
+         view: '#conter',
+         router: {
+             '/home': {
+                 templateUrl: 'html/1.html',
+                 controller:'1.js'
+               
+             },
+             '/login': {
+                 templateUrl: 'html/login.html'
+           
+             },
+       
+             'defaults': '/home' //默认路由
+         }
+    };
+	vipspa.start(routeIndex);
+	</script>
+</html>
